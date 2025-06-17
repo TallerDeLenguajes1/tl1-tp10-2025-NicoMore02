@@ -10,18 +10,31 @@ using System.Text.Json.Serialization;
 
 namespace clases
 {
-    public class Tarea 
+    public class Tarea
     {
+
         [JsonPropertyName("userId")]
         public int userId { get; set; }
 
         [JsonPropertyName("id")]
         public int id { get; set; }
 
-        [JsonPropertyName("tittle")]
-        public string tittle { get; set; }
-        
+        [JsonPropertyName("title")]
+        public string title { get; set; }
+
         [JsonPropertyName("completed")]
         public bool completed { get; set; }
+
+        public string obtenerEstado()
+        {
+            if (completed)
+            {
+                return "Completada";
+            }
+            else
+            {
+                return "Pendiente";
+            }
+        }
     }
 }

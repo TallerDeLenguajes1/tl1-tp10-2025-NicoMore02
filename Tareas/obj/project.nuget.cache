@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GJRDE4z5cxU=",
+  "dgSpecHash": "KBUCO6s6jys=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\Desktop\\tp\\tl1-tp10-2025-NicoMore02\\Tareas\\Tareas.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\nicom\\OneDrive\\Escritorio\\facultad\\Taller de lenguaje 1\\practicos\\tl1-tp10-2025-NicoMore02\\Tareas\\Tareas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicom\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\nicom\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\nicom\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\nicom\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.15\\microsoft.netcore.app.host.win-x64.8.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

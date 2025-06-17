@@ -8,18 +8,19 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using clases;
 using System.Dynamic;
-class program {
+class program
+{
     private static readonly HttpClient client = new HttpClient();
     //private const string url = "https://jsonplaceholder.typicode.com/todos/";
 
-    static async Task Main(string[] args) 
+    static async Task Main(string[] args)
     {
         var tareas = await GetTareas();
         mostrarTareas(tareas);
-        
+        GuardarTareas(tareas);
     }
 
-    static async Task<List<Tarea>> GetTareas() 
+    static async Task<List<Tarea>> GetTareas()
     {
         HttpResponseMessage response = await client.GetAsync("https://jsonplaceholder.typicode.com/todos/");
         response.EnsureSuccessStatusCode();
@@ -28,12 +29,18 @@ class program {
         return listtareas;
     }
 
-    static void mostrarTareas(List<Tarea> tareas) 
+    static void mostrarTareas(List<Tarea> tareas)
     {
         Console.WriteLine("====Tareas====");
         foreach (var tarea in tareas)
         {
-            Console.WriteLine($"Id: {tarea.id}, Titulo: {tarea.tittle}");
+            Console.WriteLine($"Id: {tarea.id}, Titulo: {tarea.title}, Estado: {tarea.obtenerEstado()}");
         }
+    }
+
+    static void GuardarTareas(List<Tarea> tareas)
+    {
+        var json = JsonSerializer.Serialize(tareas, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText("tareas.json", json);
     }
 }
